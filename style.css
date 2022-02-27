@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+}
+
+.text {
+    display: inline-block;
+    margin-bottom: 15px;
+    height: 20px;
+    width: 200px;
+}
+
+.button {
+    width: 70px;
+    display: block;
+    margin: 0 auto;
+}

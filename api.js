@@ -6,13 +6,18 @@ const submitApi = () => {
     const payload = {
         text: text.value
     }
-    fetch(slackUrl, {
-        method: 'POST',
-        body: JSON.stringify(payload)
-    }).then(() => {
-        console.log("送信が完了しました")
-        text.value = ''
-    })
+    if (text.value === '') {
+        alert('テキストを入力してください')
+    } else {
+        fetch(slackUrl, {
+            method: 'POST',
+            body: JSON.stringify(payload)
+        }).then(() => {
+            console.log("送信が完了しました")
+            text.value = ''
+        })
+    }
+
 }
 
 
